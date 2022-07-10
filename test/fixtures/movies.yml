@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 
+  title: MyString
+  genre: MyString
+  year: 1
+  country: MyString
+  published_at: 2022-07-09
+  description: MyString
+
+two:
+  id: 
+  title: MyString
+  genre: MyString
+  year: 1
+  country: MyString
+  published_at: 2022-07-09
+  description: MyString
