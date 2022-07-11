@@ -12,6 +12,7 @@ Rails.application.routes.draw do
                                                           as: :list_by_genre_country, defaults: { format: :json }
 
           get 'year/:year', to: 'movies#list_by_year', as: :list_by_year, defaults: { format: :json }
+          get 'country/:country', to: 'movies#list_by_country', as: :list_by_country, defaults: { format: :json }
         end
       end
     end

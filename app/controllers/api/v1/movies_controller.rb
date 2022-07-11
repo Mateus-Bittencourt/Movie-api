@@ -26,7 +26,7 @@ class Api::V1::MoviesController < Api::V1::BaseController
     else
       params[:genre].capitalize!
     end
-    @movies = Movie.where(year: params[:year], genre: params[:genre]).order(year: :desc)
+    @movies = Movie.where(year: params[:year], genre: params[:genre]).order(title: :asc)
   end
 
   def list_by_genre_country
@@ -35,8 +35,19 @@ class Api::V1::MoviesController < Api::V1::BaseController
     else
       params[:genre].capitalize!
     end
-    @movies = Movie.where(country: params[:country].split('-').map!(&:capitalize).join(' '),
-                          year: params[:year],
-                          genre: params[:genre]).order(year: :desc)
+    @movies = Movie.where('country LIKE ?',
+                          "%#{params[:country].split('-').map!(&:capitalize).join(' ')}%").where(
+                            year: params[:year],
+                            genre: params[:genre]
+                          ).order(year: :desc)
+  end
+
+  def list_by_year
+    @movies = Movie.where(year: params[:year]).order(title: :asc)
+  end
+
+  def list_by_country
+    @movies = Movie.where('country LIKE ?',
+                          "%#{params[:country].split('-').map!(&:capitalize).join(' ')}%").order(year: :desc)
   end
 end
