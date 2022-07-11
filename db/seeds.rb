@@ -15,5 +15,5 @@ CSV.foreach(csv_file, headers: :first_row, header_converters: :symbol) do |row|
 
 
   Movie.create(title: row[:title], genre: row[:type], year: row[:release_year].to_i, country: row[:country],
-               published_at: row[:date_added], description: row[:description])
+               published_at: row[:date_added], description: row[:description].strip)
 end
