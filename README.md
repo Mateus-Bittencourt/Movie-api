@@ -55,9 +55,6 @@ http://localhost:3000/api/v1/movies/year/<ano>
 http://localhost:3000/api/v1/movies/country/<país>
 ```
 ```
-http://localhost:3000/api/v1/movies/title/<nome-do-titulo>
-```
-```
 http://localhost:3000/api/v1/movies/genre/<genero>/year/<ano>
 ```
 ```
