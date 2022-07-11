@@ -31,11 +31,11 @@ rails s
 
 ## Acessando os registro e utilizando os filtros
 
-O catálogo com todos os filmes está disponível no path:
+* O catálogo com todos os filmes está disponível no path:
 ```
 http://localhost:3000/api/v1/movies/
 ```
-Você poderá acessar o registros individuais pelo nome do título ou id:
+* Você poderá acessar o registros individuais pelo nome do título ou id:
 ```
 http://localhost:3000/api/v1/movies/<uuid>
 ```
@@ -43,7 +43,7 @@ http://localhost:3000/api/v1/movies/<uuid>
 http://localhost:3000/api/v1/movies/title/<title_name>
 ```
 
-Também é possível filtrar a listagem por gênero(movie/tv-show), ano e país:
+* Também é possível filtrar a listagem por gênero(movie/tv-show), ano e país:
 ```
 http://localhost:3000/api/v1/movies/genre/<nome-do-genero>
 ```
@@ -64,7 +64,7 @@ http://localhost:3000/api/v1/movies/genre/<genero>/year/<ano>
 http://localhost:3000/api/v1/movies/genre/<genero>/year/<ano>/country/<país>
 ```
 
-Todos espaços em branco(' ') devem ser trocados por traço('-') para efetuar a busca.
-Também todas as buscas são case-insensitive.
+* Todos espaços em branco(' ') devem ser trocados por traço('-') para efetuar a busca.
+* Também todas as buscas são case-insensitive.
 
 Enjoy =)
