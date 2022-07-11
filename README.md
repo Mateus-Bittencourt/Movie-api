@@ -23,7 +23,7 @@ rails db:create db:migrate db:seed
 
 ## ☕ Inicializando Movie API
 
-Rode a aplicação com
+Rode a aplicação com:
 ```
 rails s
 ```
